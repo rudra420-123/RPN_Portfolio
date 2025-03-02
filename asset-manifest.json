@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/RPN_Portfolio/static/js/main.64126f3e.js",
+    "static/media/Guarder.png": "/RPN_Portfolio/static/media/Guarder.e0608200b0828a9bf976.png",
+    "static/media/High.PNG": "/RPN_Portfolio/static/media/High.f8e1507272227b14b0b1.PNG",
+    "static/media/Rudra.png": "/RPN_Portfolio/static/media/Rudra.db5af81bac3ed7f6939e.png",
+    "static/media/Skipline.png": "/RPN_Portfolio/static/media/Skipline.df6d9d661591c0ebab8c.png",
+    "static/media/ATC.jpg": "/RPN_Portfolio/static/media/ATC.2166727a950122698c47.jpg",
+    "static/media/Science.png": "/RPN_Portfolio/static/media/Science.267a73e303d0b6e508ba.png",
+    "static/media/RUDRA-PRASAD-NAYAK-CV.pdf": "/RPN_Portfolio/static/media/RUDRA-PRASAD-NAYAK-CV.147d009a624d8966d0fd.pdf",
+    "index.html": "/RPN_Portfolio/index.html",
+    "main.64126f3e.js.map": "/RPN_Portfolio/static/js/main.64126f3e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.64126f3e.js"
+  ]
+}
