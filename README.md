@@ -3,7 +3,7 @@
 Welcome to my portfolio website! This project showcases my skills, projects, and experiences as a web developer.
 
 ## 🚀 Live Demo
-Check out the live version: [Visit My Portfolio Website](https://github.com/rudra420-123/RPN_Portfolio.git)
+Check out the live version: [Visit My Portfolio Website](https://rudra420-123.github.io/RPN_Portfolio/)
 
 ## 📋 Features
 - **Responsive Design:** Works seamlessly on mobile, tablet, and desktop devices.
