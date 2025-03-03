@@ -81,7 +81,7 @@ export default function Education() {
           from you."
         </Typography>
 
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center">
           {educationData.map((edu, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <StyledCard>
