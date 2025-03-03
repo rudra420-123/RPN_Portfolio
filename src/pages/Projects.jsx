@@ -41,7 +41,7 @@ const projects = [
     description:
     "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
     image: Billing,
-    technologies: ["PYTHON", "FLASK", "JINJA"],
+    technologies: ["HTML", "CSS", "PYTHON", "FLASK", "JINJA"],
     link: "https://github.com/rudra420-123/Billing_Software/",
   }, 
 ];
