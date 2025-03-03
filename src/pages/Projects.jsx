@@ -12,6 +12,7 @@ import {
 import { styled } from "@mui/system";
 import Skipline from "../assets/Skipline.png";
 import Guarder from "../assets/Guarder.png";
+import Billing from "../assets/Billing.png";
 
 const projects = [
   {
@@ -34,6 +35,14 @@ const projects = [
     image: Guarder,
     technologies: ["REACT JS", "MATERIAL UI", "TYPESCRIPT"],
     link: "https://github.com/rudra420-123/Guarder_Website/",
+  }, 
+  {
+    title: "Billing-Software",
+    description:
+    "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
+    image: Billing,
+    technologies: ["PYTHON", "FLASK", "JINJA"],
+    link: "https://github.com/rudra420-123/",
   }, 
 ];
 

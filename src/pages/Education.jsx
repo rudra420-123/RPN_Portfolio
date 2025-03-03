@@ -44,7 +44,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
   backgroundColor: "#1a1a1a",
   color: "#ffffff",
-  width: 300,
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
   },
