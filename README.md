@@ -25,6 +25,7 @@ Check out the live version: [Visit My Portfolio Website](https://rudra420-123.gi
 ├── src
 │   ├── assets
 │   │    ├── ATC.png
+│   │    ├── Billing.png
 │   │    ├── Guarder.png
 │   │    ├── High.PNG
 │   │    ├── RUDRA-PRASAD-NAYAK-CV.pdf
