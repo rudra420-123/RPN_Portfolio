@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <CustomCursor />
-      {/* {!loadingComplete ? (
+      {!loadingComplete ? (
         <Preloader setLoadingComplete={setLoadingComplete} />
-      ) : ( */}
+      ) : (
         <>
           <HashRouter>
             <Routes>
@@ -29,7 +29,7 @@ function App() {
             </Routes>
           </HashRouter>
         </>
-      {/* )} */}
+      )}
     </>
   );
 }
