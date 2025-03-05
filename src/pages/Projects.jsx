@@ -22,7 +22,8 @@ const projects = [
       "Skipline – a cutting-edge e-commerce platform delivering a seamless shopping experience with an intuitive interface, fast performance, and personalized recommendations.",
     image: Skipline,
     technologies: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
-    link: "https://rudra420-123.github.io/Skipline_Ecommerce_Website/",
+    source: "https://github.com/rudra420-123/Skipline_Ecommerce_Website/",
+    live: "https://rudra420-123.github.io/Skipline_Ecommerce_Website/",
   },
   {
     title: "Guarder-Services",
@@ -30,7 +31,8 @@ const projects = [
       "Guarder Website offers highly trained and professional security guards to safeguard homes, businesses, and large-scale events with 24/7 availability and reliability.",
     image: Guarder,
     technologies: ["REACT JS", "MATERIAL UI", "TYPESCRIPT"],
-    link: "https://github.com/rudra420-123/Guarder_Website/",
+    source: "https://github.com/rudra420-123/Guarder_Website/",
+    live: "https://rudra420-123.github.io/Guarder_Website/",
   },
   {
     title: "Billing-Software",
@@ -38,7 +40,8 @@ const projects = [
       "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
     image: Billing,
     technologies: ["HTML", "CSS", "PYTHON", "FLASK", "JINJA"],
-    link: "https://github.com/rudra420-123/Billing_Software/",
+    source: "https://github.com/rudra420-123/Billing_Software/",
+    live: "https://github.com/rudra420-123/Billing_Software/",
   },
 ];
 
@@ -146,24 +149,46 @@ export default function Projects() {
                       <TechChip key={techIndex}>{tech}</TechChip>
                     ))}
                   </Box>
-                  <Button
-                    variant="outlined"
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      color: "#ebbc26",
-                      borderColor: "#ebbc26",
-                      "&:hover": {
-                        backgroundColor: "#ebbc26",
-                        color: "#000000",
-                      },
-                    }}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    View Project
-                  </Button>
+                  <Box sx={{ display: "flex", gap: 2 }}>
+                    <Button
+                      variant="outlined"
+                      href={project.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        color: "#ebbc26",
+                        borderColor: "#ebbc26",
+                        fontSize: { xs: "0.7rem", md: "0.9rem" },
+                        "&:hover": {
+                          backgroundColor: "#ebbc26",
+                          color: "#000000",
+                        },
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      Source Code
+                    </Button>
+                    <Button
+                      variant="outlined"
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        color: "#ebbc26",
+                        borderColor: "#ebbc26",
+                        fontSize: { xs: "0.7rem", md: "0.9rem" },
+                        "&:hover": {
+                          backgroundColor: "#ebbc26",
+                          color: "#000000",
+                        },
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      Live Demo
+                    </Button>
+                  </Box>
                 </CardContent>
               </StyledCard>
             </Grid>
