@@ -13,23 +13,23 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
-      {!loadingComplete ? (
-        <Preloader setLoadingComplete={setLoadingComplete} />
-      ) : (
-        <>
-          <HashRouter>
-            <Routes>
-              <Route path="/" element={<LayOut />}>
-                <Route index element={<HomePage />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-              </Route>
-            </Routes>
-          </HashRouter>
-        </>
-      )}
+      {/* <CustomCursor /> */}
+      {/* {!loadingComplete ? ( */}
+      {/*  <Preloader setLoadingComplete={setLoadingComplete} /> */}
+      {/*  ) : ( */}
+      <>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<LayOut />}>
+              <Route index element={<HomePage />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </>
+      {/* )} */}
     </>
   );
 }

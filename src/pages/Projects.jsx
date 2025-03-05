@@ -13,6 +13,7 @@ import { styled } from "@mui/system";
 import Skipline from "../assets/Skipline.png";
 import Guarder from "../assets/Guarder.png";
 import Billing from "../assets/Billing.png";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -50,11 +51,16 @@ const StyledCard = styled(Card)(({ theme }) => ({
   transition: "transform 0.3s ease-in-out",
   "&:hover": {
     transform: "scale(1.03)",
+    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.5)",
   },
 }));
 
 const StyledCardMedia = styled(CardMedia)({
   paddingTop: "56.25%",
+  transition: "transform 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.1)",
+  },
 });
 
 const TechChip = styled(Box)(({ theme }) => ({
@@ -71,29 +77,58 @@ export default function Projects() {
   return (
     <Container maxWidth="lg">
       <Box sx={{ bgcolor: "black", py: 8, px: 2 }}>
-        <Typography
-          align="center"
-          sx={{
-            color: "#ffffff",
-            mb: 1,
-            fontSize: { xs: "2rem", md: "3.7rem" },
-          }}
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          🌟My <span style={{ color: "#ebbc26" }}>Projects</span>
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          sx={{ color: "#ebbc26", mb: 4 }}
-        >
-          "Explore a selection of projects I've worked on to showcase my skills
-          and experience."
-        </Typography>
+          <Typography
+            align="center"
+            sx={{
+              color: "#ffffff",
+              mb: 1,
+              fontSize: { xs: "2rem", md: "3.7rem" },
+            }}
+          >
+            🌟My <span style={{ color: "#ebbc26" }}>Projects</span>
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            sx={{ color: "#ebbc26", mb: 4 }}
+          >
+            "Explore a selection of projects I've worked on to showcase my
+            skills and experience."
+          </Typography>
+        </motion.div>
+
         <Grid container spacing={4} justifyContent="center">
           {projects.map((project, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <StyledCard>
-                <StyledCardMedia image={project.image} title={project.title} />
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={index}
+              component={motion.div}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <StyledCard
+                component={motion.div}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <StyledCardMedia
+                  image={project.image}
+                  title={project.title}
+                  alt={project.title}
+                  // component={motion.img}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography
                     gutterBottom
@@ -114,6 +149,8 @@ export default function Projects() {
                   <Button
                     variant="outlined"
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
                       color: "#ebbc26",
                       borderColor: "#ebbc26",
@@ -122,6 +159,8 @@ export default function Projects() {
                         color: "#000000",
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                   >
                     View Project
                   </Button>
