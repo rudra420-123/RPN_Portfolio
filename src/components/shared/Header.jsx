@@ -14,7 +14,7 @@ import {
 import { styled } from "@mui/system";
 import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import RudraIcon from "../assets/Rudra.png";
+import RudraIcon from "../../assets/Rudra.png";
 
 const StyledAppBar = styled(AppBar)({
   backgroundColor: "black",
@@ -70,15 +70,23 @@ export default function Header() {
     <StyledAppBar position="static">
       <Container maxWidth="lg">
         <StyledToolbar disableGutters>
-          <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 1, md: 2 } }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: { xs: 1, md: 2 },
+            }}
+          >
             <StyledAvatar alt="Rudra Prasad Nayak" src={RudraIcon} />
-            <StyledTypography sx={{ flexGrow: 1, fontSize:  { xs: "1.1rem", md: "1.8rem" } }}>
+            <StyledTypography
+              sx={{ flexGrow: 1, fontSize: { xs: "1.1rem", md: "1.8rem" } }}
+            >
               Rudra Prasad Nayak
             </StyledTypography>
           </Box>
 
           {/* Display buttons on larger screens */}
-          <Box sx={{ display: { xs: "none", md: "flex" }}}>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {navItems.map((item) => (
               <NavButton
                 key={item.name}

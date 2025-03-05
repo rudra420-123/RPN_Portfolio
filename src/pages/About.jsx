@@ -26,10 +26,10 @@ export default function About() {
                 color: "white",
                 mb: 2,
                 textAlign: { xs: "center", md: "left" },
-                fontSize: { xs: "2.2rem", md: "3.2rem" },
+                fontSize: { xs: "2.1rem", md: "3.1rem" },
               }}
             >
-              Hey! I'm{" "}
+              👋Hey! I'm{" "}
               <span style={{ color: "#ebbc26" }}>Rudra Prasad Nayak</span> and
               I'm a{" "}
               <span style={{ color: "#ebbc26" }}>Full Stack Developer</span>.
@@ -42,11 +42,11 @@ export default function About() {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              I'm passionate about technology and education, and my journey has
-              encompassed roles as a developer, content creator, entrepreneur,
-              and innovator. With a strong focus on the MERN stack, I have
-              hands-on experience building full-stack applications and
-              transforming ideas into impactful solutions. I thrive on
+              👉 I'm passionate about technology and education, and my journey
+              has encompassed roles as a developer, content creator,
+              entrepreneur, and innovator. With a strong focus on the MERN
+              stack, I have hands-on experience building full-stack applications
+              and transforming ideas into impactful solutions. I thrive on
               leveraging my skills to create meaningful projects that drive
               progress and innovation.
             </Typography>
@@ -58,7 +58,7 @@ export default function About() {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              Beyond development, I enjoy creating educational content that
+              👉 Beyond development, I enjoy creating educational content that
               simplifies complex technical concepts. I’m committed to empowering
               the next generation of developers by sharing knowledge through
               easy-to-follow tutorials and resources.
@@ -71,8 +71,8 @@ export default function About() {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              My goal is to contribute to projects that drive real-world impact
-              while staying committed to lifelong learning. From building
+              👉 My goal is to contribute to projects that drive real-world
+              impact while staying committed to lifelong learning. From building
               real-time collaboration platforms to solving problems on LeetCode,
               my passion for problem-solving and technology keeps growing every
               day.

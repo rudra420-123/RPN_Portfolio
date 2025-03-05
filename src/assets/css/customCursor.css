@@ -1,0 +1,35 @@
+/* Default Custom Cursor Style */
+.custom-cursor {
+  position: fixed;
+  top: -4%;
+  left: -4%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(71, 70, 70, 0.77);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  opacity: 1;
+  will-change: transform, width, height, background-color;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255), -2px -2px 10px rgb(255, 255, 255);
+}
+
+.custom-cursor-hover {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-cursor.hidden {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}

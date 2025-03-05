@@ -24,6 +24,9 @@ Check out the live version: [Visit My Portfolio Website](https://rudra420-123.gi
 │   ├── index.html
 ├── src
 │   ├── assets
+│   │    ├── css
+│   │    │    ├── customCursor.css
+│   │    │    ├── preloader.css
 │   │    ├── ATC.png
 │   │    ├── Billing.png
 │   │    ├── Guarder.png
@@ -33,9 +36,13 @@ Check out the live version: [Visit My Portfolio Website](https://rudra420-123.gi
 │   │    ├── Science.png
 │   │    ├── Skipline.png
 │   ├── components
-│   │    ├── Footer.jsx
-│   │    ├── Header.jsx
-│   │    ├── Layout.jsx
+│   │    ├── common
+│   │    │    ├── CustomCursor.jsx
+│   │    │    ├── Preloader.jsx
+│   │    ├── shared
+│   │    │    ├── Footer.jsx
+│   │    │    ├── Header.jsx
+│   │    │    ├── Layout.jsx
 │   ├── pages
 │   │    ├── About.jsx
 │   │    ├── Contact.jsx

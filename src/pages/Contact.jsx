@@ -37,7 +37,7 @@ export default function Contact() {
             fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
           }}
         >
-          Don't hesitate to get in touch!
+          📳Don't hesitate to get in touch!
         </Typography>
 
         <Avatar

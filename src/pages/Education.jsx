@@ -69,7 +69,7 @@ export default function Education() {
             fontSize: { xs: "2rem", md: "3.7rem" },
           }}
         >
-          My <span style={{ color: "#ebbc26" }}>Education</span>
+          🏫 My <span style={{ color: "#ebbc26" }}>Education</span>
         </Typography>
         <Typography
           variant="subtitle1"

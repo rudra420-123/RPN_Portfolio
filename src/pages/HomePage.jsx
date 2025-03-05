@@ -66,12 +66,13 @@ export default function HomePage() {
                   fontSize: { xs: "2rem", md: "3.7rem" },
                 }}
               >
-                Hello, I’m a <GreenText>{rotatingWords[wordIndex]}.</GreenText>
+                👋Hello, I’m a{" "}
+                <GreenText>{rotatingWords[wordIndex]}.</GreenText>
               </Typography>
               <Typography
                 sx={{ mb: 2, textAlign: { xs: "center", md: "left" } }}
               >
-                I'm <b>Rudra Prasad Nayak</b>, a passionate web developer and
+                👉 I'm <b>Rudra Prasad Nayak</b>, a passionate web developer and
                 technology enthusiast. I enjoy tackling complex challenges and
                 turning ideas into impactful, scalable solutions through clean
                 and efficient code. My goal is to use my skills to create
@@ -90,7 +91,7 @@ export default function HomePage() {
                     backgroundColor: "#ebbc26",
                     color: "black",
                     "&:hover": {
-                      backgroundColor: "#6ea55b",
+                      backgroundColor: "#facd3c",
                     },
                   }}
                 >

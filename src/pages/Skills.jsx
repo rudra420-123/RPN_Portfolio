@@ -64,7 +64,7 @@ export default function Skills() {
             fontSize: { xs: "2rem", md: "3.7rem" },
           }}
         >
-          Skills <span style={{ color: "#ffffff" }}>&</span>{" "}
+          🏆Skills <span style={{ color: "#ffffff" }}>&</span>{" "}
           <span style={{ color: "#FFFF00" }}>Expertises</span>
         </Typography>
         <Grid container spacing={3} justifyContent="center">

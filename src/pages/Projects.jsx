@@ -20,30 +20,25 @@ const projects = [
     description:
       "Skipline – a cutting-edge e-commerce platform delivering a seamless shopping experience with an intuitive interface, fast performance, and personalized recommendations.",
     image: Skipline,
-    technologies: [
-      "HTML",
-      "CSS",
-      "JAVASCRIPT",
-      "BOOTSTRAP",
-    ],
+    technologies: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
     link: "https://rudra420-123.github.io/Skipline_Ecommerce_Website/",
   },
   {
     title: "Guarder-Services",
     description:
-    "Guarder Website offers highly trained and professional security guards to safeguard homes, businesses, and large-scale events with 24/7 availability and reliability.",
+      "Guarder Website offers highly trained and professional security guards to safeguard homes, businesses, and large-scale events with 24/7 availability and reliability.",
     image: Guarder,
     technologies: ["REACT JS", "MATERIAL UI", "TYPESCRIPT"],
     link: "https://github.com/rudra420-123/Guarder_Website/",
-  }, 
+  },
   {
     title: "Billing-Software",
     description:
-    "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
+      "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
     image: Billing,
     technologies: ["HTML", "CSS", "PYTHON", "FLASK", "JINJA"],
     link: "https://github.com/rudra420-123/Billing_Software/",
-  }, 
+  },
 ];
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -84,7 +79,7 @@ export default function Projects() {
             fontSize: { xs: "2rem", md: "3.7rem" },
           }}
         >
-          My <span style={{ color: "#ebbc26" }}>Projects</span>
+          🌟My <span style={{ color: "#ebbc26" }}>Projects</span>
         </Typography>
         <Typography
           variant="subtitle1"
