@@ -46,6 +46,8 @@ const projects = [
 ];
 
 const StyledCard = styled(Card)(({ theme }) => ({
+  position: "relative",
+  zIndex: 10,
   height: "100%",
   display: "flex",
   flexDirection: "column",
