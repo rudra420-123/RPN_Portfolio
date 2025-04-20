@@ -10,10 +10,13 @@ import {
   Container,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import { motion } from "framer-motion";
 import Skipline from "../assets/Skipline.png";
 import Guarder from "../assets/Guarder.png";
 import Billing from "../assets/Billing.png";
-import { motion } from "framer-motion";
+import ImageEnhancer from "../assets/ImageEnhancer.png";
+import CodeReviewer from "../assets/CodeReviewer.png";
+import Luxurious_360_Tour from "../assets/Luxurious_360_Tour.png";
 
 const projects = [
   {
@@ -43,6 +46,33 @@ const projects = [
     source: "https://github.com/rudra420-123/Billing_Software/",
     live: "https://github.com/rudra420-123/Billing_Software/",
   },
+  {
+    title: "Ai-Image-Enhancer",
+    description:
+      "AI Image Enhancer is a tool that uses artificial intelligence to automatically improve image quality by enhancing resolution, reducing noise, sharpening details, and correcting colors.",
+    image: ImageEnhancer,
+    technologies: ["REACT JS", "TAILWIND CSS", "AI INTEGRATION"],
+    source: "https://github.com/rudra420-123/Ai_Image_Enhancer",
+    live: "https://rudra420-123.github.io/Ai_Image_Enhancer/",
+  },
+  {
+    title: "Ai-Code-Reviewer",
+    description:
+      "An AI Code Reviewer automatically checks code for errors, quality, security, and best practices, offering quick suggestions to improve and optimize it.",
+    image: CodeReviewer,
+    technologies: ["REACT JS", "TAILWIND CSS", "AI INTEGRATION"],
+    source: "https://github.com/rudra420-123/Ai_Code_Reviewer",
+    live: "https://rudra420-123.github.io/Ai_Code_Reviewer/",
+  },
+  {
+    title: "Luxurious_360_Tour",
+    description:
+      "Luxurious_360_Tour features a virtual 360° tour of a luxury house, allowing users to click on labeled rooms and explore each one with smooth, realistic navigation.",
+    image: Luxurious_360_Tour,
+    technologies: ["REACT JS", "TAILWIND CSS", "SHADCN UI", "FRAMER-MOTION", "THREE JS"],
+    source: "https://github.com/rudra420-123/Luxurious_360_Tour",
+    live: "https://rudra420-123.github.io/Luxurious_360_Tour/",
+  },
 ];
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -53,6 +83,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   flexDirection: "column",
   backgroundColor: "#1a1a1a",
   color: "#ffffff",
+  border:'1px, solid,rgb(255, 255, 255)',
   transition: "transform 0.3s ease-in-out",
   "&:hover": {
     transform: "scale(1.03)",

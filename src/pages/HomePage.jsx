@@ -1,11 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Button, Container, Grid } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  Container,
+  Grid,
+  IconButton,
+} from "@mui/material";
 import { styled } from "@mui/system";
 import RudraIcon from "../assets/Rudra.png";
 import Skills from "./Skills";
 import Education from "./Education";
 import Resume from "../assets/RUDRA-PRASAD-NAYAK-CV.pdf";
 import { motion } from "framer-motion";
+import { Facebook, Instagram } from "@mui/icons-material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+const SocialButton = styled(IconButton)({
+  color: "#ebbc26",
+  "&:hover": {
+    backgroundColor: "rgba(136, 194, 115, 0.1)",
+  },
+});
 
 const StyledHeroSection = styled(Box)({
   backgroundColor: "black",
@@ -135,6 +152,7 @@ export default function HomePage() {
                     sx={{
                       backgroundColor: "#ebbc26",
                       color: "black",
+                      mb: "10px",
                       "&:hover": {
                         backgroundColor: "#facd3c",
                       },
@@ -143,6 +161,46 @@ export default function HomePage() {
                     View My CV
                   </Button>
                 </a>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <Box>
+                  {[
+                    {
+                      href: "https://www.facebook.com/profile.php?id=100057072414096",
+                      icon: <Facebook />,
+                    },
+                    {
+                      href: "https://www.linkedin.com/in/RudraPrasadNayak728/",
+                      icon: <LinkedInIcon />,
+                    },
+                    {
+                      href: "https://www.instagram.com/dipu13562/",
+                      icon: <Instagram />,
+                    },
+                    {
+                      href: "https://github.com/Rudra-Prasad-Nayak",
+                      icon: <GitHubIcon />,
+                    },
+                  ].map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SocialButton
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {item.icon}
+                      </SocialButton>
+                    </a>
+                  ))}
+                </Box>
               </motion.div>
             </Grid>
 
