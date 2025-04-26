@@ -1,24 +1,26 @@
 {
   "files": {
     "main.css": "/RPN_Portfolio/static/css/main.fddf299b.css",
-    "main.js": "/RPN_Portfolio/static/js/main.d097edce.js",
+    "main.js": "/RPN_Portfolio/static/js/main.86371296.js",
     "static/media/Luxurious_360_Tour.png": "/RPN_Portfolio/static/media/Luxurious_360_Tour.9cf109f05bac49ad386d.png",
     "static/media/Guarder.png": "/RPN_Portfolio/static/media/Guarder.e0608200b0828a9bf976.png",
     "static/media/High.PNG": "/RPN_Portfolio/static/media/High.f8e1507272227b14b0b1.PNG",
     "static/media/Rudra.png": "/RPN_Portfolio/static/media/Rudra.db5af81bac3ed7f6939e.png",
     "static/media/Skipline.png": "/RPN_Portfolio/static/media/Skipline.df6d9d661591c0ebab8c.png",
     "static/media/ATC.jpg": "/RPN_Portfolio/static/media/ATC.2166727a950122698c47.jpg",
+    "static/media/ProDevelopersTheme.png": "/RPN_Portfolio/static/media/ProDevelopersTheme.ef6a9d9a938552998df0.png",
     "static/media/Science.png": "/RPN_Portfolio/static/media/Science.267a73e303d0b6e508ba.png",
+    "static/media/TypingMaster.png": "/RPN_Portfolio/static/media/TypingMaster.5a3c30ce5183b4977e5c.png",
     "static/media/ImageEnhancer.png": "/RPN_Portfolio/static/media/ImageEnhancer.66818371f88d91943b3b.png",
     "static/media/CodeReviewer.png": "/RPN_Portfolio/static/media/CodeReviewer.714c65c9f68939529a35.png",
     "static/media/Billing.png": "/RPN_Portfolio/static/media/Billing.33113c2e9ba47023f7fb.png",
     "static/media/RUDRA-PRASAD-NAYAK-CV.pdf": "/RPN_Portfolio/static/media/RUDRA-PRASAD-NAYAK-CV.55ccb68f73f2f2f87eae.pdf",
     "index.html": "/RPN_Portfolio/index.html",
     "main.fddf299b.css.map": "/RPN_Portfolio/static/css/main.fddf299b.css.map",
-    "main.d097edce.js.map": "/RPN_Portfolio/static/js/main.d097edce.js.map"
+    "main.86371296.js.map": "/RPN_Portfolio/static/js/main.86371296.js.map"
   },
   "entrypoints": [
     "static/css/main.fddf299b.css",
-    "static/js/main.d097edce.js"
+    "static/js/main.86371296.js"
   ]
 }
