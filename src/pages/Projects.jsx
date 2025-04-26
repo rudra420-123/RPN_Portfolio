@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -17,6 +17,8 @@ import Billing from "../assets/Billing.png";
 import ImageEnhancer from "../assets/ImageEnhancer.png";
 import CodeReviewer from "../assets/CodeReviewer.png";
 import Luxurious_360_Tour from "../assets/Luxurious_360_Tour.png";
+import TypingMaster from "../assets/TypingMaster.png";
+import ProDevelopersTheme from "../assets/ProDevelopersTheme.png";
 
 const projects = [
   {
@@ -40,7 +42,7 @@ const projects = [
   {
     title: "Billing-Software",
     description:
-      "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly with features like itemized billing, customer management, and automated bill generation.",
+      "Billing Software simplifies billing processes, enabling users to create, manage, and save invoices effortlessly like itemized billing, customer management, and automated bill generation.",
     image: Billing,
     technologies: ["HTML", "CSS", "PYTHON", "FLASK", "JINJA"],
     source: "https://github.com/rudra420-123/Billing_Software/",
@@ -69,9 +71,33 @@ const projects = [
     description:
       "Luxurious_360_Tour features a virtual 360° tour of a luxury house, allowing users to click on labeled rooms and explore each one with smooth, realistic navigation.",
     image: Luxurious_360_Tour,
-    technologies: ["REACT JS", "TAILWIND CSS", "SHADCN UI", "FRAMER-MOTION", "THREE JS"],
+    technologies: [
+      "REACT JS",
+      "TAILWIND CSS",
+      "SHADCN UI",
+      "FRAMER-MOTION",
+      "THREE JS",
+    ],
     source: "https://github.com/rudra420-123/Luxurious_360_Tour",
     live: "https://rudra420-123.github.io/Luxurious_360_Tour/",
+  },
+  {
+    title: "ProDevelopers Theme",
+    description:
+      "ProDevelopers Theme is a custom VS Code theme designed for modern developers. It features a clean, luxurious look with vibrant syntax highlighting, dark modes.",
+    image: ProDevelopersTheme,
+    technologies: ["VS CODE", "JSON", "THEME DESIGN"],
+    source: "https://github.com/rudra420-123/ProDevelopers_Theme",
+    live: "https://marketplace.visualstudio.com/items?itemName=developershub.prodevelopers-theme&ssr=false#review-details",
+  },
+  {
+    title: "Typing Master",
+    description:
+      "Typing Master is a sleek typing speed and accuracy trainer with customizable timers, real-time stats (WPM, errors, accuracy), and a modern dark/light UI.",
+    image: TypingMaster,
+    technologies: ["REACT JS", "TAILWIND CSS"],
+    source: "https://github.com/rudra420-123/Typing_Master",
+    live: "https://rudra420-123.github.io/Typing_Master/",
   },
 ];
 
@@ -83,7 +109,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   flexDirection: "column",
   backgroundColor: "#1a1a1a",
   color: "#ffffff",
-  border:'1px, solid,rgb(255, 255, 255)',
+  border: "1px, solid,rgb(255, 255, 255)",
   transition: "transform 0.3s ease-in-out",
   "&:hover": {
     transform: "scale(1.03)",
@@ -110,6 +136,15 @@ const TechChip = styled(Box)(({ theme }) => ({
 }));
 
 export default function Projects() {
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const handleViewMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
+
+  const visibleProjects = projects.slice(0, visibleCount);
+  const hasMore = visibleCount < projects.length;
+
   return (
     <Container maxWidth="lg">
       <Box sx={{ bgcolor: "black", py: 8, px: 2 }}>
@@ -139,7 +174,7 @@ export default function Projects() {
         </motion.div>
 
         <Grid container spacing={4} justifyContent="center">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <Grid
               item
               xs={12}
@@ -161,7 +196,6 @@ export default function Projects() {
                   image={project.image}
                   title={project.title}
                   alt={project.title}
-                  // component={motion.img}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 />
@@ -227,6 +261,28 @@ export default function Projects() {
             </Grid>
           ))}
         </Grid>
+
+        {hasMore && (
+          <Box textAlign="center" mt={6}>
+            <Button
+              onClick={handleViewMore}
+              variant="outlined"
+              sx={{
+                color: "#ebbc26",
+                borderColor: "#ebbc26",
+                px: 4,
+                py: 1,
+                fontSize: "1rem",
+                "&:hover": {
+                  backgroundColor: "#ebbc26",
+                  color: "#000000",
+                },
+              }}
+            >
+              View More
+            </Button>
+          </Box>
+        )}
       </Box>
     </Container>
   );

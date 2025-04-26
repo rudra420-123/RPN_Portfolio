@@ -40,11 +40,11 @@ export default function About() {
                 I'm a{" "}
                 <span style={{ color: "#ebbc26" }}>Full Stack Developer</span>.
               </Typography>
-              </motion.div>
-              <motion.div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay:0.1,  ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
               <Typography
                 variant="body1"
@@ -62,11 +62,11 @@ export default function About() {
                 thrive on leveraging my skills to create meaningful projects
                 that drive progress and innovation.
               </Typography>
-              </motion.div>
-              <motion.div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay:0.2,  ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <Typography
                 variant="body1"
@@ -81,11 +81,11 @@ export default function About() {
                 empowering the next generation of developers by sharing
                 knowledge through easy-to-follow tutorials and resources.
               </Typography>
-              </motion.div>
-              <motion.div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay:0.3,  ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
               <Typography
                 variant="body1"
