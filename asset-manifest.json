@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RPN_Portfolio/static/css/main.fddf299b.css",
-    "main.js": "/RPN_Portfolio/static/js/main.a735ee53.js",
+    "main.js": "/RPN_Portfolio/static/js/main.20e0ea06.js",
     "static/media/Luxurious_360_Tour.png": "/RPN_Portfolio/static/media/Luxurious_360_Tour.9cf109f05bac49ad386d.png",
     "static/media/Guarder.png": "/RPN_Portfolio/static/media/Guarder.e0608200b0828a9bf976.png",
     "static/media/High.PNG": "/RPN_Portfolio/static/media/High.f8e1507272227b14b0b1.PNG",
@@ -18,10 +18,10 @@
     "static/media/Whatsapp.png": "/RPN_Portfolio/static/media/Whatsapp.982667be5020fc8469fc.png",
     "index.html": "/RPN_Portfolio/index.html",
     "main.fddf299b.css.map": "/RPN_Portfolio/static/css/main.fddf299b.css.map",
-    "main.a735ee53.js.map": "/RPN_Portfolio/static/js/main.a735ee53.js.map"
+    "main.20e0ea06.js.map": "/RPN_Portfolio/static/js/main.20e0ea06.js.map"
   },
   "entrypoints": [
     "static/css/main.fddf299b.css",
-    "static/js/main.a735ee53.js"
+    "static/js/main.20e0ea06.js"
   ]
 }
