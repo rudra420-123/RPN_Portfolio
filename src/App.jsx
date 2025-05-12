@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import Project from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-// import Preloader from "./components/common/Preloader";
-// import CustomCursor from "./components/common/CustomCursor";
+import Preloader from "./components/common/Preloader";
+import CustomCursor from "./components/common/CustomCursor";
 import StarCanvas from "./components/canvas/Stars";
 import HeroBgAnimation from "./components/HeroBgAnimation";
 import { styled } from "@mui/system";
@@ -34,7 +34,7 @@ const HeroBg = styled("div")(({ theme }) => ({
 }));
 
 const App = () => {
-  // const [loadingComplete, setLoadingComplete] = useState(false);
+  const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
     <>
@@ -42,11 +42,11 @@ const App = () => {
         <StarCanvas />
         <HeroBgAnimation />
       </HeroBg>
-      {/* <CustomCursor />
+      <CustomCursor />
       {!loadingComplete ? (
         <Preloader setLoadingComplete={setLoadingComplete} />
       ) : (
-        <> */}
+        <>
           <HashRouter>
             <Routes>
               <Route path="/" element={<LayOut />}>
@@ -58,8 +58,8 @@ const App = () => {
             </Routes>
           </HashRouter>
         </>
-    //   )}
-    // </>
+      )}
+    </>
   );
 };
 
