@@ -225,7 +225,7 @@ const Projects = () => {
             },
           }}
         >
-          {["All Projects", "Web Dev", "AI & Tools", "VS Code"].map(
+          {["All", "Web Dev", "AI & Tools", "VS Code"].map(
             (label, index) => (
               <Tab
                 key={label}

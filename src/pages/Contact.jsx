@@ -55,7 +55,7 @@ Read the Below Message Carefully!!!\n ${message}`;
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          py: 8,
+          py: 6,
           px: 2,
         }}
       >
@@ -148,7 +148,6 @@ Read the Below Message Carefully!!!\n ${message}`;
                 flexDirection: "column",
                 gap: 2,
                 backgroundColor: "transparent",
-                padding: "0px 30px",
                 borderRadius: "12px",
               }}
             >

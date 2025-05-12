@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <Box sx={{ backgroundColor: "#000", color: "white" }}>
-      <Container maxWidth="lg" sx={{ py: 10 }}>
+      <Container maxWidth="lg" sx={{ py: 2 }}>
         <Grid container spacing={4}>
           {/* Logo and Info */}
           <Grid item xs={12} md={4}>
