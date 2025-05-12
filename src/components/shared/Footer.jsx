@@ -1,119 +1,215 @@
 import React from "react";
-import { Box, Container, Typography, Button, IconButton } from "@mui/material";
-import { styled } from "@mui/system";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import {
+  Box,
+  Container,
+  Typography,
+  Link as MuiLink,
+  Grid,
+  Button,
+  IconButton,
+  Stack,
+} from "@mui/material";
+import {
+  Facebook,
+  Instagram,
+  LinkedIn,
+  GitHub,
+  Mail,
+  Phone,
+  Public,
+  Room,
+  Chat,
+  Coffee,
+} from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram } from "@mui/icons-material";
-import { motion } from "framer-motion";
-
-const StyledFooter = styled(Box)({
-  backgroundColor: "black",
-  color: "#ebbc26",
-  padding: "2rem 0",
-});
-
-const NavButton = styled(Button)({
-  color: "#ebbc26",
-  "&:hover": {
-    backgroundColor: "rgba(136, 194, 115, 0.1)",
-  },
-});
-
-const SocialButton = styled(IconButton)({
-  color: "#ebbc26",
-  "&:hover": {
-    backgroundColor: "rgba(136, 194, 115, 0.1)",
-  },
-});
-
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" },
-];
 
 export default function Footer() {
   return (
-    <StyledFooter>
-      <Container maxWidth="lg">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Box display="flex" flexDirection="column" alignItems="center">
+    <Box sx={{ backgroundColor: "#000", color: "white" }}>
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Grid container spacing={4}>
+          {/* Logo and Info */}
+          <Grid item xs={12} md={4}>
             <Typography
-              variant="h6"
-              component="div"
-              sx={{ fontWeight: "bold", marginBottom: "1rem" }}
+              variant="h5"
+              fontWeight="bold"
+              color="#ebbc26"
+              gutterBottom
             >
               Rudra Prasad Nayak
             </Typography>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                {navItems.map((item) => (
-                  <NavButton
-                    key={item.name}
-                    component={Link}
-                    to={item.path}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {item.name}
-                  </NavButton>
-                ))}
-              </Box>
-            </motion.div>
+            <Typography variant="body1" color="white">
+              Passionate developer and designer of the Keep Notes platform.
+              Simplifying note-taking with modern UX.
+            </Typography>
+            <Stack direction="row" spacing={2} alignItems="center" mt={2}>
+              <Room fontSize="medium" />
+              <Typography variant="body1" color="white">
+                Chatrapur, Ganjam, Odisha, India
+              </Typography>
+            </Stack>
+            <Stack direction="row" spacing={2} alignItems="center" mt={2}>
+              <Phone fontSize="medium" />
+              <Typography variant="body1" color="white">
+                +91-7847091537
+              </Typography>
+            </Stack>
+            <Stack direction="row" spacing={2} alignItems="center" mt={2}>
+              <Mail fontSize="medium" />
+              <Typography variant="body1" color="white">
+                rudraprasadnayak728@gmail.com
+              </Typography>
+            </Stack>
+          </Grid>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+          {/* Navigation */}
+          <Grid item xs={12} md={2}>
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              color="#ebbc26"
+              gutterBottom
             >
-              <Box>
-                {[
-                  {
-                    href: "https://www.facebook.com/profile.php?id=100057072414096",
-                    icon: <Facebook />,
-                  },
-                  {
-                    href: "https://www.linkedin.com/in/RudraPrasadNayak728/",
-                    icon: <LinkedInIcon />,
-                  },
-                  {
-                    href: "https://www.instagram.com/dipu13562/",
-                    icon: <Instagram />,
-                  },
-                  {
-                    href: "https://github.com/Rudra-Prasad-Nayak",
-                    icon: <GitHubIcon />,
-                  },
-                ].map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              Navigation
+            </Typography>
+            {[
+              { text: "🏠 Home", to: "/" },
+              { text: "👤 About", to: "/about" },
+              { text: "📝 Projects", to: "/projects" },
+              { text: "📞 Contact", to: "/contact" },
+            ].map((item) => (
+              <Typography
+                key={item.to}
+                variant="body1"
+                color="white"
+                sx={{ my: 1 }}
+              >
+                <Link
+                  to={item.to}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <MuiLink
+                    color="inherit"
+                    sx={{
+                      textDecoration: "none",
+                      "&:hover": { color: "#ebbc26", textDecoration: "none" },
+                    }}
                   >
-                    <SocialButton
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      {item.icon}
-                    </SocialButton>
-                  </a>
-                ))}
-              </Box>
-            </motion.div>
-          </Box>
-        </motion.div>
+                    {item.text}
+                  </MuiLink>
+                </Link>
+              </Typography>
+            ))}
+          </Grid>
+
+          {/* Features */}
+          <Grid item xs={12} md={3}>
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              color="#ebbc26"
+              gutterBottom
+            >
+              Features
+            </Typography>
+            {[
+              "🖥️ Show My Web Development Projects",
+              "🔧 Display My Technical Expertise Skills",
+              "🖼️ Share My Creative Process",
+              "🌱 Share My Learning and Growth",
+              "🌐 Provide Links of My Blogs",
+              "👨‍💻 Highlight My Freelance Work",
+              "📞 Offer Contact Info for Collaborations",
+              "💬 Display Testimonials and Feedbacks",
+            ].map((feature, index) => (
+              <Typography
+                key={index}
+                variant="body2"
+                color="white"
+                sx={{ my: 1 }}
+              >
+                {feature}
+              </Typography>
+            ))}
+          </Grid>
+
+          {/* Support */}
+          <Grid item xs={12} md={3}>
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              color="#ebbc26"
+              gutterBottom
+            >
+              Support
+            </Typography>
+            <Button
+              variant="outlined"
+              startIcon={<Coffee />}
+              href="https://buymeacoffee.com/rudraprasa3"
+              target="_blank"
+              sx={{
+                color: "white",
+                borderColor: "white",
+                textTransform: "none",
+                "&:hover": {
+                  color: "#ebbc26",
+                  borderColor: "#ebbc26",
+                },
+                mb: 2,
+              }}
+            >
+              Buy Me A Coffee
+            </Button>
+            <Typography variant="body1" color="white">
+              Made with ❤️ by Rudra Prasad Nayak
+            </Typography>
+            <Box mt={2} display="flex">
+              {[
+                {
+                  icon: <LinkedIn />,
+                  href: "https://www.linkedin.com/in/RudraPrasadNayak728/",
+                },
+                { icon: <GitHub />, href: "https://github.com/rudra420-123" },
+                {
+                  icon: <Instagram />,
+                  href: "https://www.instagram.com/dipu13562/",
+                },
+                {
+                  icon: <Facebook />,
+                  href: "https://www.facebook.com/profile.php?id=100057072414096",
+                },
+                {
+                  icon: <Public />,
+                  href: "https://rudra420-123.github.io/RPN_Portfolio/",
+                },
+                { icon: <Chat />, href: "https://wa.me/7847091537" },
+              ].map(({ icon, href }, i) => (
+                <IconButton
+                  key={i}
+                  component="a"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    "&:hover": {
+                      color: "#ebbc26",
+                      backgroundColor: "transparent",
+                    },
+                  }}
+                >
+                  {icon}
+                </IconButton>
+              ))}
+            </Box>
+          </Grid>
+        </Grid>
       </Container>
-    </StyledFooter>
+
+      <Box textAlign="center" py={2} borderTop="1px solid white" color="white">
+        © {new Date().getFullYear()} Rudra Prasad Nayak. All Rights Reserved.
+      </Box>
+    </Box>
   );
 }

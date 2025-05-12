@@ -18,7 +18,7 @@ const educationData = [
   {
     school: "Academy Of Technocrats College, Berhampur",
     years: "2022-2025",
-    status: "Pursuing",
+    status: "Completed",
     image: ATCCollege,
     qualification: "Graduation",
     // description: '',
