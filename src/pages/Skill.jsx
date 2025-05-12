@@ -33,17 +33,18 @@ const skills = [
   { name: "C++", icon: "➕" },
   { name: "PHP", icon: "🐘" },
   // { name: 'Kubernets', icon: '🕸️' },
-  // { name: 'Postman', icon: '📮' },
+  { name: "Postman", icon: "📮" },
   { name: "Figma", icon: "🖌️" },
   { name: "Canva", icon: "🖍️" },
   { name: "Docker", icon: "🐳" },
   { name: "GitHub", icon: "🐙" },
   { name: "Heroku", icon: "🚀" },
+  { name: "Netlify", icon: "🌀" },
   { name: "Vercel", icon: "▲" },
 ];
 
 const SkillCard = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(2),
+  padding: theme.spacing(1),
   textAlign: "center",
   color: "#ffffff",
   background: "#1a1a1a",
@@ -57,7 +58,7 @@ const SkillCard = styled(Paper)(({ theme }) => ({
 export default function Skills() {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ bgcolor: "black", py: 8, px: 2 }}>
+      <Box sx={{ bgcolor: "black", py: 2, px: 2 }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,7 +84,7 @@ export default function Skills() {
               xs={6}
               sm={4}
               md={3}
-              lg={2}
+              lg={1.5}
               key={skill.name}
               component={motion.div}
               initial={{ opacity: 0, y: 50 }}
@@ -96,14 +97,14 @@ export default function Skills() {
                   transition={{ duration: 0.3 }}
                 >
                   <Typography
-                    variant="h1"
+                    variant="h5"
                     component="div"
-                    sx={{ fontSize: "3rem", mb: 1 }}
+                    sx={{ fontSize: "2rem", mb: 1 }}
                   >
                     {skill.icon}
                   </Typography>
                 </motion.div>
-                <Typography variant="subtitle1">{skill.name}</Typography>
+                <Typography variant="body2">{skill.name}</Typography>
               </SkillCard>
             </Grid>
           ))}

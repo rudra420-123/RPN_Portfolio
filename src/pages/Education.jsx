@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 const educationData = [
   {
-    school: "Academy Of Technocrats College, Berhampur",
+    schoolName: "Academy Of Technocrats College, Berhampur",
     years: "2022-2025",
     status: "Completed",
     image: ATCCollege,
@@ -24,7 +24,7 @@ const educationData = [
     // description: '',
   },
   {
-    school: "Govt.Science College, Chatrapur",
+    schoolName: "Govt.Science College, Chatrapur",
     years: "2020-2022",
     status: "Completed",
     image: ScienceCollege,
@@ -32,7 +32,7 @@ const educationData = [
     // description: '',
   },
   {
-    school: "Karapada High School, Karapada",
+    schoolName: "Karapada High School, Karapada",
     years: "2019-2020",
     status: "Completed",
     image: HighSchool,
@@ -69,7 +69,7 @@ const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
 export default function Education() {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ bgcolor: "black", py: 8, px: 2 }}>
+      <Box sx={{ bgcolor: "black", py: 6, px: 2 }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -118,29 +118,32 @@ export default function Education() {
                 <StyledCardMedia
                   component="img"
                   image={edu.image}
-                  alt={edu.school}
+                  alt={edu.schoolName}
                   // component={motion.img}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography
-                    variant="h5"
+                    variant="h6"
                     component="div"
-                    sx={{ color: "#ebbc26", mb: 1 }}
+                    sx={{ fontSize: "1.5rem", color: "#ebbc26" }}
                   >
-                    {edu.school}
+                    {edu.schoolName}
                   </Typography>
                   {/* {edu.description && (
                                     <Typography variant="body2" sx={{ mb: 1 }}>
                                         {edu.description}
                                     </Typography>
                                 )} */}
-                  <Typography variant="body1" sx={{ color: "#ebbc26", mb: 1 }}>
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "#ebbc26", mb: 1, mt: 1 }}
+                  >
                     {edu.years} | {edu.status}
                   </Typography>
                   <Typography
-                    variant="h6"
+                    variant="body1"
                     component="div"
                     sx={{ color: "#ebbc26" }}
                   >

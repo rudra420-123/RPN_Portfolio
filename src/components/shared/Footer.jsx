@@ -20,13 +20,14 @@ import {
   Room,
   Chat,
   Coffee,
+  WhatsApp,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <Box sx={{ backgroundColor: "#000", color: "white" }}>
-      <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Container maxWidth="lg" sx={{ py: 10 }}>
         <Grid container spacing={4}>
           {/* Logo and Info */}
           <Grid item xs={12} md={4}>
@@ -75,7 +76,7 @@ export default function Footer() {
             {[
               { text: "🏠 Home", to: "/" },
               { text: "👤 About", to: "/about" },
-              { text: "📝 Projects", to: "/projects" },
+              { text: "📝 Projects", to: "/project" },
               { text: "📞 Contact", to: "/contact" },
             ].map((item) => (
               <Typography
@@ -183,7 +184,7 @@ export default function Footer() {
                   icon: <Public />,
                   href: "https://rudra420-123.github.io/RPN_Portfolio/",
                 },
-                { icon: <Chat />, href: "https://wa.me/7847091537" },
+                { icon: <WhatsApp />, href: "https://wa.me/7847091537" },
               ].map(({ icon, href }, i) => (
                 <IconButton
                   key={i}

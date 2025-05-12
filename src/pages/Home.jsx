@@ -9,13 +9,19 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import RudraIcon from "../assets/Rudra.png";
-import Skills from "./Skills";
+import Skill from "./Skill";
 import Education from "./Education";
 import Resume from "../assets/RUDRA-PRASAD-NAYAK-CV.pdf";
 import { motion } from "framer-motion";
-import { Facebook, Instagram } from "@mui/icons-material";
+import { Facebook, Instagram, WhatsApp } from "@mui/icons-material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Service from "./Service";
+
+const buttons = [
+  { label: "View My CV", link: Resume },
+  { label: "Hire Me", link: "https://wa.me/7847091537" },
+];
 
 const SocialButton = styled(IconButton)({
   color: "#ebbc26",
@@ -27,7 +33,7 @@ const SocialButton = styled(IconButton)({
 const StyledHeroSection = styled(Box)({
   backgroundColor: "black",
   color: "white",
-  minHeight: "100vh",
+  minHeight: "90vh",
   display: "flex",
   alignItems: "center",
   overflow: "hidden",
@@ -122,16 +128,16 @@ export default function HomePage() {
                 <Typography
                   sx={{ mb: 2, textAlign: { xs: "center", md: "left" } }}
                 >
-                  👉 I'm <b>Rudra Prasad Nayak</b>, a passionate web developer
-                  and technology enthusiast. I enjoy tackling complex challenges
-                  and turning ideas into impactful, scalable solutions through
-                  clean and efficient code. My goal is to use my skills to
-                  create innovative projects that make a real difference.
+                  👉 I'm <b>Rudra Prasad Nayak</b>, a passionate and self-taught
+                  web developer and technology enthusiast. I enjoy tackling
+                  complex challenges and turning ideas into impactful, scalable
+                  solutions through clean and efficient code. My goal is to use
+                  my skills to create innovative projects that make a real
+                  difference.
                 </Typography>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.1 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -140,27 +146,37 @@ export default function HomePage() {
                   delay: 1,
                 }}
               >
-                <a
-                  href={Resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                      backgroundColor: "#ebbc26",
-                      color: "black",
-                      mb: "10px",
-                      "&:hover": {
-                        backgroundColor: "#facd3c",
-                      },
-                    }}
+                {buttons.map((btn, index) => (
+                  <a
+                    key={index}
+                    href={btn.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none" }}
                   >
-                    View My CV
-                  </Button>
-                </a>
+                    <Button
+                      variant="contained"
+                      size="large"
+                      sx={{
+                        backgroundColor: "#ebbc26",
+                        color: "black",
+                        fontWeight: "bold",
+                        px: 3,
+                        py: 1.5,
+                        m: "8px",
+                        borderRadius: "30px",
+                        boxShadow: "0 4px 12px rgba(235, 188, 38, 0.3)",
+                        transition: "0.3s ease-in-out",
+                        "&:hover": {
+                          backgroundColor: "#facd3c",
+                          boxShadow: "0 6px 18px rgba(250, 205, 60, 0.4)",
+                        },
+                      }}
+                    >
+                      {btn.label}
+                    </Button>
+                  </a>
+                ))}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -170,20 +186,24 @@ export default function HomePage() {
                 <Box>
                   {[
                     {
-                      href: "https://www.facebook.com/profile.php?id=100057072414096",
-                      icon: <Facebook />,
-                    },
-                    {
                       href: "https://www.linkedin.com/in/RudraPrasadNayak728/",
                       icon: <LinkedInIcon />,
+                    },
+                    {
+                      href: "https://github.com/Rudra-Prasad-Nayak",
+                      icon: <GitHubIcon />,
                     },
                     {
                       href: "https://www.instagram.com/dipu13562/",
                       icon: <Instagram />,
                     },
                     {
-                      href: "https://github.com/Rudra-Prasad-Nayak",
-                      icon: <GitHubIcon />,
+                      href: "https://www.facebook.com/profile.php?id=100057072414096",
+                      icon: <Facebook />,
+                    },
+                    {
+                      href: "https://wa.me/7847091537",
+                      icon: <WhatsApp />,
                     },
                   ].map((item, index) => (
                     <a
@@ -226,8 +246,9 @@ export default function HomePage() {
           </Grid>
         </Container>
       </StyledHeroSection>
-      <Skills />
+      <Skill />
       <Education />
+      <Service />
     </>
   );
 }

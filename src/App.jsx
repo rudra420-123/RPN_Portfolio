@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import LayOut from "./components/shared/LayOut";
-import HomePage from "./pages/HomePage";
-import Projects from "./pages/Projects";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Preloader from "./components/common/Preloader";
-import CustomCursor from "./components/common/CustomCursor";
+// import Preloader from "./components/common/Preloader";
+// import CustomCursor from "./components/common/CustomCursor";
 import StarCanvas from "./components/canvas/Stars";
 import HeroBgAnimation from "./components/HeroBgAnimation";
 import { styled } from "@mui/system";
@@ -34,7 +34,7 @@ const HeroBg = styled("div")(({ theme }) => ({
 }));
 
 const App = () => {
-  const [loadingComplete, setLoadingComplete] = useState(false);
+  // const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
     <>
@@ -42,24 +42,24 @@ const App = () => {
         <StarCanvas />
         <HeroBgAnimation />
       </HeroBg>
-      <CustomCursor />
+      {/* <CustomCursor />
       {!loadingComplete ? (
         <Preloader setLoadingComplete={setLoadingComplete} />
       ) : (
-        <>
+        <> */}
           <HashRouter>
             <Routes>
               <Route path="/" element={<LayOut />}>
-                <Route index element={<HomePage />} />
-                <Route path="/projects" element={<Projects />} />
+                <Route index element={<Home />} />
+                <Route path="/project" element={<Project />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
               </Route>
             </Routes>
           </HashRouter>
         </>
-      )}
-    </>
+    //   )}
+    // </>
   );
 };
 

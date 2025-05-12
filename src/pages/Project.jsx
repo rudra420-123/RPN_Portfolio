@@ -27,7 +27,7 @@ const projects = [
     title: "Skipline-Marketplace",
     category: "Web Dev",
     description:
-      "Skipline – a cutting-edge e-commerce platform delivering a seamless shopping experience.",
+      "Skipline – a cutting-edge e-commerce platform delivering a seamless shopping with interactive user experience.",
     image: Skipline,
     technologies: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
     source: "https://github.com/rudra420-123/Skipline_Ecommerce_Website/",
@@ -67,7 +67,7 @@ const projects = [
     title: "Ai-Code-Reviewer",
     category: "AI & Tools",
     description:
-      "An AI Code Reviewer automatically checks code for errors, quality, security, and best practices.",
+      "An AI Code Reviewer automatically checks the code and find errors, quality, security, and best practices.",
     image: CodeReviewer,
     technologies: ["REACT JS", "TAILWIND CSS", "AI INTEGRATION"],
     source: "https://github.com/rudra420-123/Ai_Code_Reviewer",
@@ -77,7 +77,7 @@ const projects = [
     title: "Luxurious_360_Tour",
     category: "Web Dev",
     description:
-      "Luxurious_360_Tour features a virtual 360° tour of a luxury house with smooth, realistic navigation.",
+      "It features a virtual 360° tour of a luxury house with smooth, realistic navigation.",
     image: Luxurious_360_Tour,
     technologies: ["REACT JS", "TAILWIND CSS", "THREE JS", "FRAMER-MOTION"],
     source: "https://github.com/rudra420-123/Luxurious_360_Tour",
@@ -157,11 +157,11 @@ const Projects = () => {
   const getCategoryLabel = (tabIndex) => {
     switch (tabIndex) {
       case 1:
-        return "Web Development";
+        return "Web Dev";
       case 2:
         return "AI & Tools";
       case 3:
-        return "VS Code Themes";
+        return "VS Code";
       default:
         return "";
     }
@@ -336,14 +336,14 @@ const Projects = () => {
         </Grid>
 
         {visibleCount < filteredProjects.length && (
-          <Box textAlign="center" mt={6}>
+          <Box textAlign="center" mt={4}>
             <Button
               onClick={handleViewMore}
               variant="outlined"
               sx={{
                 color: "#ebbc26",
                 borderColor: "#ebbc26",
-                px: 4,
+                px: 3,
                 py: 1,
                 fontSize: "1rem",
                 "&:hover": {

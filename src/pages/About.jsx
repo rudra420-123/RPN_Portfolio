@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Avatar, Container } from "@mui/material";
 import { styled } from "@mui/system";
-import { LinkedIn, GitHub } from "@mui/icons-material";
+import { LinkedIn, GitHub, WhatsApp } from "@mui/icons-material";
 import RudraIcon from "../assets/Rudra.png";
 import { Facebook, Instagram } from "@mui/icons-material";
 import { motion } from "framer-motion";
@@ -111,20 +111,24 @@ export default function About() {
               <Box sx={{ mt: 3, textAlign: { xs: "center", md: "left" } }}>
                 {[
                   {
-                    href: "https://www.facebook.com/profile.php?id=100057072414096",
-                    icon: <Facebook />,
-                  },
-                  {
                     href: "https://www.linkedin.com/in/RudraPrasadNayak728/",
                     icon: <LinkedIn />,
+                  },
+                  {
+                    href: "https://github.com/Rudra-Prasad-Nayak",
+                    icon: <GitHub />,
                   },
                   {
                     href: "https://www.instagram.com/dipu13562/",
                     icon: <Instagram />,
                   },
                   {
-                    href: "https://github.com/Rudra-Prasad-Nayak",
-                    icon: <GitHub />,
+                    href: "https://www.facebook.com/profile.php?id=100057072414096",
+                    icon: <Facebook />,
+                  },
+                  {
+                    href: "https://wa.me/7847091537",
+                    icon: <WhatsApp />,
                   },
                 ].map((item, index) => (
                   <SocialIcon
