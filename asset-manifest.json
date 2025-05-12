@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RPN_Portfolio/static/css/main.fddf299b.css",
-    "main.js": "/RPN_Portfolio/static/js/main.86371296.js",
+    "main.js": "/RPN_Portfolio/static/js/main.a735ee53.js",
     "static/media/Luxurious_360_Tour.png": "/RPN_Portfolio/static/media/Luxurious_360_Tour.9cf109f05bac49ad386d.png",
     "static/media/Guarder.png": "/RPN_Portfolio/static/media/Guarder.e0608200b0828a9bf976.png",
     "static/media/High.PNG": "/RPN_Portfolio/static/media/High.f8e1507272227b14b0b1.PNG",
@@ -15,12 +15,13 @@
     "static/media/CodeReviewer.png": "/RPN_Portfolio/static/media/CodeReviewer.714c65c9f68939529a35.png",
     "static/media/Billing.png": "/RPN_Portfolio/static/media/Billing.33113c2e9ba47023f7fb.png",
     "static/media/RUDRA-PRASAD-NAYAK-CV.pdf": "/RPN_Portfolio/static/media/RUDRA-PRASAD-NAYAK-CV.55ccb68f73f2f2f87eae.pdf",
+    "static/media/Whatsapp.png": "/RPN_Portfolio/static/media/Whatsapp.982667be5020fc8469fc.png",
     "index.html": "/RPN_Portfolio/index.html",
     "main.fddf299b.css.map": "/RPN_Portfolio/static/css/main.fddf299b.css.map",
-    "main.86371296.js.map": "/RPN_Portfolio/static/js/main.86371296.js.map"
+    "main.a735ee53.js.map": "/RPN_Portfolio/static/js/main.a735ee53.js.map"
   },
   "entrypoints": [
     "static/css/main.fddf299b.css",
-    "static/js/main.86371296.js"
+    "static/js/main.a735ee53.js"
   ]
 }
